@@ -42,23 +42,26 @@ const employees = [
 
 function bonusCalculator (employee) {
 console.log('in bonusCalculator');
-for (i=0; i<employees.length; i++) {
-  if (employee.reviewRating == 3) {
-let bonus = employee.annualSalary * .04;
-return bonus;
+let finalObject = {};
+for (let i=0; i<employees.length; i++) {
+  if (employee.reviewRating <= 2) {
+    let bonusPercentage = 0;
+    return bonusPercentage;
+  }
+  else if (employee.reviewRating == 3) {
+let bonusPercentage = .04;
+return bonusPercentage;
   } else if (employee.reviewRating == 4) {
-    bonus = employee.annualSalary * .06;
-    return bonus;
+    bonusPercentage = .06;
+    return bonusPercentage;
   } else if (employee.reviewRating == 5) {
-    bonus = (employee.annualSalary * .1)
-    return bonus;
+    bonusPercentage = .1;
+    return bonusPercentage;
   }
   else {
     return 'no bonus';
   }
 }
-
-
 }
 
 console.log(bonusCalculator(employees[0]));
