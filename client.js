@@ -40,33 +40,42 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
-function bonusCalculator (employee) {
-console.log('in bonusCalculator');
-let finalObject = {};
-for (let i=0; i<employees.length; i++) {
-  if (employee.reviewRating <= 2) {
-    let bonusPercentage = 0;
-    return bonusPercentage;
-  }
-  else if (employee.reviewRating == 3) {
-let bonusPercentage = .04;
-return bonusPercentage;
-  } else if (employee.reviewRating == 4) {
-    bonusPercentage = .06;
-    return bonusPercentage;
-  } else if (employee.reviewRating == 5) {
-    bonusPercentage = .1;
-    return bonusPercentage;
-  }
-  else {
-    return 'no bonus';
+function bonusCalculator(employee) {
+  console.log('in bonusCalculator');
+  let finalObject = {};
+  for (let i = 0; i < employees.length; i++) {
+
+    if (employee.reviewRating <= 2) {
+      let bonusPercentage = 0;
+      return bonusPercentage;
+    }
+    else if (employee.reviewRating == 3) {
+      bonusPercentage = .04;
+      return bonusPercentage;
+    } else if (employee.reviewRating == 4) {
+      bonusPercentage = .06;
+      return bonusPercentage;
+    } else if (employee.reviewRating >= 5) {
+      bonusPercentage = .1;
+      return bonusPercentage;
+    }
+    if (Number(employee.employeeNumber.length == 5)) {
+
+      bonusPercentage + .05;
+      console.log(bonusPercentage);
+    }
   }
 }
+for (let i = 0; i < employees.length; i++) {
+  console.log(bonusCalculator(employees[i]));
 }
+
 
 console.log(bonusCalculator(employees[0]));
 console.log(bonusCalculator(employees[1]));
 console.log(bonusCalculator(employees[2]));
 console.log(bonusCalculator(employees[3]));
 console.log(bonusCalculator(employees[4]));
-console.log( employees );
+console.log(employees);
+
+console.log(Number(employees[1].length));
