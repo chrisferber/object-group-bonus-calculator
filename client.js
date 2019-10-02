@@ -40,10 +40,10 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
+let finalEmployeePay = [];
+
 function bonusCalculator(employee) {
   console.log('in bonusCalculator');
-  let finalObject = {};
-  for (let i = 0; i < employees.length; i++) {
 
     if (employee.reviewRating <= 2) {
       let bonusPercentage = 0;
@@ -65,7 +65,7 @@ function bonusCalculator(employee) {
       console.log(bonusPercentage);
     }
   }
-}
+
 for (let i = 0; i < employees.length; i++) {
   console.log(bonusCalculator(employees[i]));
 }
