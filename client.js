@@ -47,35 +47,39 @@ function bonusCalculator(employee) {
 
     if (employee.reviewRating <= 2) {
       let bonusPercentage = 0;
-      return bonusPercentage;
     }
     else if (employee.reviewRating == 3) {
-      bonusPercentage = .04;
-      return bonusPercentage;
+      bonusPercentage = .04 * 100;
     } else if (employee.reviewRating == 4) {
-      bonusPercentage = .06;
-      return bonusPercentage;
+      bonusPercentage = .06 * 100;
     } else if (employee.reviewRating >= 5) {
-      bonusPercentage = .1;
-      return bonusPercentage;
+      bonusPercentage = .1 * 100;
     }
-    if (Number(employee.employeeNumber.length == 5)) {
-
-      bonusPercentage + .05;
+    if (employee.employeeNumber.length == 5) {
+      bonusPercentage + .05 *100;
       console.log(bonusPercentage);
     }
+    if ( bonusPercentage > .13 ) {
+      bonusPercentage = .13;
+    }
+    if ( bonusPercentage < 0 ) {
+      bonusPercentage = 0;
+    } 
+    let newEmployeeObject = {};
+    finalEmployeePay.push(  )
   }
+  function employeeLoyaltyBonus(employee) {
+    for (let i = 0; i < employees.length; i++)
+    if (employees[i].employeeNumber.length == 5) {
+      
+    }
+  } 
 
 for (let i = 0; i < employees.length; i++) {
   console.log(bonusCalculator(employees[i]));
 }
 
 
-console.log(bonusCalculator(employees[0]));
-console.log(bonusCalculator(employees[1]));
-console.log(bonusCalculator(employees[2]));
-console.log(bonusCalculator(employees[3]));
-console.log(bonusCalculator(employees[4]));
 console.log(employees);
 
-console.log(Number(employees[1].length));
+console.log(Number(employees[1].employeeNumber.length));
