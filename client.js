@@ -44,23 +44,26 @@ let finalEmployeePay = [];
 
 function bonusCalculator(employee) {
   console.log('in bonusCalculator');
-
+  //set initial value
+    let bonusPercentage=0;
     if (employee.reviewRating <= 2) {
-      let bonusPercentage = 0;
+       bonusPercentage = 0;
+       return bonusPercentage;
     }
     else if (employee.reviewRating == 3) {
-      bonusPercentage = .04 * 100;
+      bonusPercentage += .04 * 100;
     } else if (employee.reviewRating == 4) {
-      bonusPercentage = .06 * 100;
+      bonusPercentage += .06 * 100;
     } else if (employee.reviewRating >= 5) {
-      bonusPercentage = .1 * 100;
+      bonusPercentage += .1 * 100;
     }
-    if (employee.employeeNumber.length == 5) {
-      bonusPercentage + .05 *100;
+    if (employee.employeeNumber.length == 4) {
+        //+= so you're setting new value 
+      bonusPercentage += .05 *100;
       console.log(bonusPercentage);
     }
     if ( bonusPercentage > .13 ) {
-      bonusPercentage = .13;
+      bonusPercentage = 13;
     }
     if ( bonusPercentage < 0 ) {
       bonusPercentage = 0;
